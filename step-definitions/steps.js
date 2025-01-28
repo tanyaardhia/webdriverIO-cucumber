@@ -1,5 +1,6 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
 const { expect, $ } = require('@wdio/globals')
+const allure = require('allure-commandline');
 
 const LoginPage = require('../pageobjects/login.page');
 const SecurePage = require('../pageobjects/secure.page');

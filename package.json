@@ -19,11 +19,13 @@
   "homepage": "https://github.com/tanyaardhia/webdriverIO-cucumber#readme",
   "description": "",
   "devDependencies": {
+    "@wdio/allure-reporter": "^9.6.3",
     "@wdio/cli": "^9.7.1",
     "@wdio/cucumber-framework": "^9.6.4",
     "@wdio/local-runner": "^9.7.1",
     "@wdio/spec-reporter": "^9.6.3",
     "@wdio/visual-service": "^6.3.0",
+    "allure-commandline": "^2.32.0",
     "wdio-wait-for": "^3.0.11"
   }
 }
