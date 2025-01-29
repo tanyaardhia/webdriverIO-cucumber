@@ -14,7 +14,8 @@ Feature: a Website e-commerce
     Then 05_Click Continue
     When 06_Go to Checkout overview
     Then 06_click button finish
-    Then 06_Go to page thank you for order
+    When 07_Go to page thank you for order
+    Then 07_Back to Home Page
 
     Examples:
       | username        | password     | firstname   | lastname   | postalcode |

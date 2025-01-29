@@ -56,6 +56,10 @@ Then(/^(.*)_click button finish$/, async (code) => {
     await bookStore_page.clickButtonFinish()
 });
 
-Then(/^(.*)_Go to page thank you for order$/,  async (code) => {
+When(/^(.*)_Go to page thank you for order$/,  async (code) => {
     await bookStore_page.validateThankyouPage()
+});
+
+Then(/^(.*)_Back to Home Page$/, async (code) => {
+    await bookStore_page.goToHomePage()
 });

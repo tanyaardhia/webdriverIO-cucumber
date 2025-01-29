@@ -15,4 +15,5 @@ module.exports = class BookStore_Key {
     titleOnOverview = 'span[data-test="title"]'
     iconFinish = 'button[id="finish"]'
     titleThankyouPage = 'h2[data-test="complete-header"]'
+    iconBackHome = 'button[id="back-to-products"]'
 }

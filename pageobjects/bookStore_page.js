@@ -61,6 +61,10 @@ class BookStore_page {
         await $(bookStoreKey.titleThankyouPage).isExisting();
     }
 
+    async goToHomePage() {
+        await $(bookStoreKey.iconBackHome).click();
+    }
+
 }
 
 module.exports = new BookStore_page();
