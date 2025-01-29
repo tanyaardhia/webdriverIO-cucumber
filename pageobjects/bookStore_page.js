@@ -53,6 +53,14 @@ class BookStore_page {
         await $(bookStoreKey.titleOnOverview).isExisting();
     }
 
+    async clickButtonFinish() {
+        await $(bookStoreKey.iconFinish).click();
+    }
+
+    async validateThankyouPage() {
+        await $(bookStoreKey.titleThankyouPage).isExisting();
+    }
+
 }
 
 module.exports = new BookStore_page();

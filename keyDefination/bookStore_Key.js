@@ -13,4 +13,6 @@ module.exports = class BookStore_Key {
     formPostalcode = 'input[id="postal-code"]'
     buttonContinue = '//*[@id="continue"]'
     titleOnOverview = 'span[data-test="title"]'
+    iconFinish = 'button[id="finish"]'
+    titleThankyouPage = 'h2[data-test="complete-header"]'
 }
