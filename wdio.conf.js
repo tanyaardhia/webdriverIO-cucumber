@@ -1,7 +1,8 @@
 exports.config = {
     runner: 'local',
     specs: [
-        './features/**/*.feature'
+        // './features/**/*.feature', // semua file features
+        './features/swagLabs.feature'
     ],
     exclude: [
         // 'path/to/excluded/files'

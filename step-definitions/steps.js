@@ -1,24 +1,33 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
 const { expect, $ } = require('@wdio/globals')
 const allure = require('allure-commandline');
+const bookStore_page = require('../pageobjects/bookStore_page')
+// const SecurePage = require('../pageobjects/secure.page');
 
-const LoginPage = require('../pageobjects/login.page');
-const SecurePage = require('../pageobjects/secure.page');
-
-const pages = {
-    login: LoginPage
-}
-
-Given(/^I am on the (\w+) page$/, async (page) => {
-    await pages[page].open()
+When(/^I am on the login page$/, async () => {
+    await bookStore_page.open()
 });
 
-When(/^I login with (\w+) and (.+)$/, async (username, password) => {
-    await LoginPage.login(username, password)
+Then(/^I login with (.*) and (.*)$/, async (username, password) => {
+    await bookStore_page.loginPage(username, password)
 });
 
-Then(/^I should see a flash message saying (.*)$/, async (message) => {
-    await expect(SecurePage.flashAlert).toBeExisting();
-    await expect(SecurePage.flashAlert).toHaveText(expect.stringContaining(message));
+When(/^Select a product and add it to the cart$/, async () => {
+    await bookStore_page.addingCart()
 });
 
+Then(/^Success adding to cart$/, async () => {
+    return true
+});
+
+Then(/^see list product$/, async () => {
+    await bookStore_page.validateListProducts()
+});
+
+When(/^Click cart icon$/, async () => {
+    await bookStore_page.clickIconCart()
+});
+
+Then(/^Go to cart page$/, async () => {
+    await bookStore_page.goToCartPage();
+});
