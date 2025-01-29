@@ -16,4 +16,7 @@ module.exports = class BookStore_Key {
     iconFinish = 'button[id="finish"]'
     titleThankyouPage = 'h2[data-test="complete-header"]'
     iconBackHome = 'button[id="back-to-products"]'
+    iconHamburger = 'button[id="react-burger-menu-btn"]'
+    iconLogout = '//*[@id="logout_sidebar_link"]'
+    titleOnLogin = '//*[@id="root"]/div/div[1]'
 }

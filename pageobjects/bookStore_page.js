@@ -65,6 +65,17 @@ class BookStore_page {
         await $(bookStoreKey.iconBackHome).click();
     }
 
+    async clickButtonHamburger() {
+        await $(bookStoreKey.iconHamburger).click();
+    }
+
+    async clickButtonLogout() {
+        await $(bookStoreKey.iconLogout).click();
+    }
+
+    async validateLoginPage() {
+        await $(bookStoreKey.titleOnLogin).isExisting();
+    }
 }
 
 module.exports = new BookStore_page();

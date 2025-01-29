@@ -63,3 +63,15 @@ When(/^(.*)_Go to page thank you for order$/,  async (code) => {
 Then(/^(.*)_Back to Home Page$/, async (code) => {
     await bookStore_page.goToHomePage()
 });
+
+When(/^(.*)_click button hamburger$/, async (code) => {
+    await bookStore_page.clickButtonHamburger()
+});
+
+When(/^(.*)_click button Logout$/, async (code) =>{
+    await bookStore_page.clickButtonLogout()
+});
+
+Then(/^(.*)_Go to login page$/, async (code) => {
+    await bookStore_page.validateLoginPage()
+});
