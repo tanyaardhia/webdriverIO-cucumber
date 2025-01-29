@@ -12,6 +12,7 @@ Feature: a Website e-commerce
     Then 04_Go to page your infomation
     When 05_fill the form order <firstname>, <lastname>, <postalcode>
     Then 05_Click Continue
+    Then 05_Go to Checkout overview
 
     Examples:
       | username        | password     | firstname   | lastname   | postalcode |

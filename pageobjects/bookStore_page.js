@@ -49,6 +49,10 @@ class BookStore_page {
         await $(bookStoreKey.buttonContinue).click();
     }
 
+    async validateOverview() {
+        await $(bookStoreKey.titleOnOverview).isExisting();
+    }
+
 }
 
 module.exports = new BookStore_page();

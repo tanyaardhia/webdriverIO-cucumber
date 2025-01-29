@@ -47,3 +47,7 @@ When(/^(.*)_fill the form order (.*), (.*), (.*)$/, async (code, firstname, last
 Then(/^(.*)_Click Continue$/, async (code) => {
     await bookStore_page.clickButtonContinue()
 });
+
+Then(/^(.*)_Go to Checkout overview$/, async (code) =>{
+    await bookStore_page.validateOverview()
+});

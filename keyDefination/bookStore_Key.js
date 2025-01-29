@@ -12,4 +12,5 @@ module.exports = class BookStore_Key {
     formLastName = 'input[id="last-name"]'
     formPostalcode = 'input[id="postal-code"]'
     buttonContinue = '//*[@id="continue"]'
+    titleOnOverview = 'span[data-test="title"]'
 }
