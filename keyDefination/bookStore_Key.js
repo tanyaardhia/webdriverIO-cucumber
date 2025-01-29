@@ -6,4 +6,10 @@ module.exports = class BookStore_Key {
     listProducts = 'div[id="inventory_container"]'
     iconCart = 'a[data-test="shopping-cart-link"]'
     titleOnCartPage = 'span[data-test="title"]'
+    iconCheckout = 'button[id="checkout"]'
+    titleOnCheckoutPage = 'span[data-test="title"]'
+    formFirstName = 'input[id="first-name"]'
+    formLastName = 'input[id="last-name"]'
+    formPostalcode = 'input[id="postal-code"]'
+    buttonContinue = '//*[@id="continue"]'
 }

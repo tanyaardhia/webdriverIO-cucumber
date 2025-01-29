@@ -30,6 +30,25 @@ class BookStore_page {
     async goToCartPage() {
         await $(bookStoreKey.titleOnCartPage).isExisting();
     }
+
+    async clickIconCheckout() {
+        await $(bookStoreKey.iconCheckout).click()
+    }
+
+    async goToCheckoutPage() {
+        await $(bookStoreKey.titleOnCheckoutPage).isExisting();
+    }
+
+    async fillTheForm(firstname, lastname, postalcode) {
+        await $(bookStoreKey.formFirstName).setValue(firstname);
+        await $(bookStoreKey.formLastName).setValue(lastname);
+        await $(bookStoreKey.formPostalcode).setValue(postalcode);
+    }
+
+    async clickButtonContinue() {
+        await $(bookStoreKey.buttonContinue).click();
+    }
+
 }
 
 module.exports = new BookStore_page();

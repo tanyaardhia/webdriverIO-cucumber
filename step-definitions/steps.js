@@ -4,30 +4,46 @@ const allure = require('allure-commandline');
 const bookStore_page = require('../pageobjects/bookStore_page')
 // const SecurePage = require('../pageobjects/secure.page');
 
-When(/^I am on the login page$/, async () => {
+When(/^(.*)_I am on the login page$/, async (code) => {
     await bookStore_page.open()
 });
 
-Then(/^I login with (.*) and (.*)$/, async (username, password) => {
+Then(/^(.*)_I login with (.*) and (.*)$/, async (code, username, password) => {
     await bookStore_page.loginPage(username, password)
 });
 
-When(/^Select a product and add it to the cart$/, async () => {
+When(/^(.*)_Select a product and add it to the cart$/, async (code) => {
     await bookStore_page.addingCart()
 });
 
-Then(/^Success adding to cart$/, async () => {
+Then(/^(.*)_Success adding to cart$/, async (code) => {
     return true
 });
 
-Then(/^see list product$/, async () => {
+Then(/^(.*)_see list product$/, async (code) => {
     await bookStore_page.validateListProducts()
 });
 
-When(/^Click cart icon$/, async () => {
+When(/^(.*)_Click cart icon$/, async (code) => {
     await bookStore_page.clickIconCart()
 });
 
-Then(/^Go to cart page$/, async () => {
+Then(/^(.*)_Go to cart page$/, async (code) => {
     await bookStore_page.goToCartPage();
+});
+
+When(/^(.*)_Click icon checkout$/, async (code) => {
+    await bookStore_page.clickIconCheckout()
+});
+
+Then(/^(.*)_Go to page your infomation$/, async (code) => {
+    await bookStore_page.goToCheckoutPage()
+});
+
+When(/^(.*)_fill the form order (.*), (.*), (.*)$/, async (code, firstname, lastname, postalcode) => {
+    await bookStore_page.fillTheForm(firstname, lastname, postalcode)
+});
+
+Then(/^(.*)_Click Continue$/, async (code) => {
+    await bookStore_page.clickButtonContinue()
 });
