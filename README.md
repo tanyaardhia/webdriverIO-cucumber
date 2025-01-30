@@ -33,6 +33,8 @@ validation on specific pages
 ```
 
 ## Technologies Used
+_Test Automation Framework_: WebdriverIO
+
 _Programming Language_: JavaScript
 
 _Test Runner_: Cucumber
